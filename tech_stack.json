@@ -1,0 +1,84 @@
+{
+  "foundations": {
+    "scope": "BitTorrent DHT Search Engine Clone",
+    "architecture": "Monolithic server-side rendered application",
+    "target_audience": "Users searching for torrent content",
+    "business_model": "Free public search service"
+  },
+  "frontend": {
+    "framework": "Vanilla HTML/CSS/JavaScript",
+    "rendering": "Server-side rendering",
+    "performance": "Minimal client-side processing",
+    "i18n": "Multi-language support (EN, FR, PT, CN, RU)",
+    "css_framework": "Custom CSS with Font Awesome 4.7.0",
+    "responsive_design": false,
+    "accessibility": "Basic HTML semantics"
+  },
+  "backend": {
+    "languages": ["Python", "Node.js"],
+    "frameworks": ["Flask", "Express.js"],
+    "apis": "RESTful search API",
+    "data_handling": "DHT crawling and indexing",
+    "search_engine": "Full-text search over torrent metadata"
+  },
+  "databases": {
+    "primary": "SQLite for development, PostgreSQL for production",
+    "nosql": "Redis for caching",
+    "search": "Elasticsearch or SQLite FTS",
+    "caching": "Redis for search results caching"
+  },
+  "auth": {
+    "identity_providers": "None - public service",
+    "jwt": "Not required",
+    "sessions": "Not required",
+    "rbac": "Not required"
+  },
+  "security": {
+    "https": "Required for production",
+    "csrf": "Basic form protection",
+    "xss": "Input sanitization",
+    "sql_injection": "Parameterized queries",
+    "rate_limiting": "Search query rate limiting"
+  },
+  "hosting": {
+    "servers": "VPS or cloud hosting",
+    "hosting_model": "Traditional web hosting",
+    "networking": "Standard HTTP/HTTPS",
+    "cdn": "Optional for static assets"
+  },
+  "devops": {
+    "ci_cd": "GitHub Actions",
+    "infra_as_code": "Docker Compose",
+    "containerization": "Docker",
+    "monitoring": "Basic health checks",
+    "scaling": "Horizontal scaling with load balancer"
+  },
+  "testing": {
+    "unit": "Jest for JavaScript, pytest for Python",
+    "integration": "API endpoint testing",
+    "e2e": "Selenium or Playwright",
+    "performance": "Search response time testing"
+  },
+  "ux": {
+    "design_system": "Simple, functional design",
+    "analytics": "Basic search analytics",
+    "ab_testing": "Not required for MVP"
+  },
+  "compliance": {
+    "gdpr": "Minimal data collection",
+    "accessibility": "WCAG 2.1 AA compliance",
+    "licensing": "Open source license"
+  },
+  "advanced": {
+    "realtime": "Real-time DHT crawling",
+    "ai_ml": "Not required",
+    "payments": "Not required",
+    "notifications": "RSS feed",
+    "integrations": "OpenSearch, TOR mirror"
+  },
+  "lifecycle": {
+    "versioning": "Semantic versioning",
+    "documentation": "README and API docs",
+    "slas": "99.9% uptime target"
+  }
+}

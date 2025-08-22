@@ -1,0 +1,180 @@
+/* BTDigg Clone Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/* Search form styling */
+#searchForm {
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#searchForm input[type="text"] {
+    outline: none;
+    border: none;
+    background: white;
+}
+
+#searchForm input[type="text"]:focus {
+    background: #f8f8f8;
+}
+
+#searchForm button {
+    transition: background-color 0.2s;
+}
+
+#searchForm button:hover {
+    background: #000099 !important;
+}
+
+/* Navigation links */
+a {
+    color: rgb(0, 0, 204);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Language selector */
+#languageSelect {
+    border: 1px solid #ccc;
+    padding: 2px 4px;
+    border-radius: 3px;
+    background: white;
+    color: #333;
+}
+
+/* Logo styling */
+img[alt="BTDigg, rediscover the net"] {
+    transition: opacity 0.2s;
+}
+
+img[alt="BTDigg, rediscover the net"]:hover {
+    opacity: 0.8;
+}
+
+/* GitHub fork ribbon */
+a[href*="github"] img {
+    transition: transform 0.2s;
+}
+
+a[href*="github"]:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    #searchForm {
+        width: 90% !important;
+        max-width: 500px;
+    }
+    
+    .center > div > div {
+        padding: 10px 5px 80px !important;
+    }
+    
+    img[alt="BTDigg, rediscover the net"] {
+        height: 150px !important;
+        width: 150px !important;
+    }
+}
+
+/* Search results styling */
+.search-results {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 10px;
+}
+
+.result-item {
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 4px;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.result-item:hover {
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.result-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0000cc;
+    margin-bottom: 5px;
+}
+
+.result-info {
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.result-magnet {
+    color: #0000cc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.result-magnet:hover {
+    text-decoration: underline;
+}
+
+/* Pagination */
+.pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pagination a {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 2px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: #0000cc;
+    border-radius: 3px;
+}
+
+.pagination a:hover {
+    background: #f0f0f0;
+}
+
+.pagination .current {
+    background: #0000cc;
+    color: white;
+    border-color: #0000cc;
+}
+
+/* Loading indicator */
+.loading {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+.loading::after {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #0000cc;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

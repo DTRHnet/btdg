@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - BTDigg DHT Search Engine</title>
+    <meta name="description" content="About BTDigg DHT Search Engine">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a style="position:absolute;z-index:10;top:0;right:0;border:0" href="https://github.com/btdig/dhtcrawler2">
+        <img style="border:0" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub">
+    </a>
+    
+    <center>
+        <div style="min-height:100%;position:relative;margin:0px;padding:0px">
+            <div style="padding: 10px 10px 80px;max-width:1000px">
+                <div style="margin: 30px 0px 20px">
+                    <a style="color:rgb(0, 0, 204);text-decoration:none" href="/index.html">
+                        <img style="height:100px;width:100px;border-width:0px;border-style:none;border-color:white" 
+                             alt="BTDigg, rediscover the net" src="logo.png">
+                    </a>
+                </div>
+                
+                <!-- Search form -->
+                <form id="searchForm" style="width:600px;height:2.8em;border:1px solid #bbb;position:relative" action="/search" method="get">
+                    <input id="q" name="q" style="height:39px;border-style:none;line-height:20px;font-size:18px;position:relative;width:100%;padding: 0px 10px;box-sizing:border-box" 
+                           placeholder="Search torrents..." type="text">
+                    <button type="submit" style="position:absolute;right:0;top:0;height:100%;width:50px;background:#0000cc;color:white;border:none;cursor:pointer">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+                
+                <!-- About content -->
+                <div style="max-width: 800px; margin: 40px auto; text-align: left; padding: 0 20px;">
+                    <h1 style="color: #333; margin-bottom: 30px;">About BTDigg</h1>
+                    
+                    <div style="background: #f8f8f8; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+                        <h2 style="color: #0000cc; margin-top: 0;">What is BTDigg?</h2>
+                        <p style="line-height: 1.6; color: #555;">
+                            BTDigg is a BitTorrent DHT search engine that analyzes the DHT network in real-time 
+                            and provides full-text search over active torrents. This is a clone/demo version 
+                            created for educational purposes.
+                        </p>
+                    </div>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <h2 style="color: #0000cc;">Features</h2>
+                        <ul style="line-height: 1.6; color: #555;">
+                            <li><strong>Real-time DHT Analysis:</strong> Continuously crawls the BitTorrent DHT network</li>
+                            <li><strong>Full-text Search:</strong> Search through torrent titles and descriptions</li>
+                            <li><strong>Magnet Links:</strong> Direct magnet link generation for easy downloading</li>
+                            <li><strong>Recent Findings:</strong> View the latest torrents discovered</li>
+                            <li><strong>RSS Feed:</strong> Subscribe to updates via RSS</li>
+                            <li><strong>OpenSearch Integration:</strong> Add to your browser's search engines</li>
+                            <li><strong>Multi-language Support:</strong> Available in multiple languages</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <h2 style="color: #0000cc;">How It Works</h2>
+                        <p style="line-height: 1.6; color: #555;">
+                            BTDigg operates by crawling the BitTorrent Distributed Hash Table (DHT) network, 
+                            which is a decentralized network used by BitTorrent clients to find peers. The system 
+                            continuously monitors this network, indexes torrent metadata, and makes it searchable 
+                            through a web interface.
+                        </p>
+                    </div>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <h2 style="color: #0000cc;">Technology Stack</h2>
+                        <ul style="line-height: 1.6; color: #555;">
+                            <li><strong>Backend:</strong> Python Flask web framework</li>
+                            <li><strong>Database:</strong> SQLite with full-text search capabilities</li>
+                            <li><strong>Frontend:</strong> Vanilla HTML, CSS, and JavaScript</li>
+                            <li><strong>Search:</strong> SQLite FTS5 for fast text search</li>
+                            <li><strong>Deployment:</strong> Docker containerization</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <h2 style="color: #0000cc;">Legal Notice</h2>
+                        <p style="line-height: 1.6; color: #555;">
+                            This is a demonstration clone of BTDigg created for educational purposes. 
+                            The original BTDigg service and this clone are search engines that index publicly 
+                            available torrent metadata. We do not host, store, or distribute any copyrighted content. 
+                            Users are responsible for ensuring they have the right to download any content they access.
+                        </p>
+                    </div>
+                    
+                    <div style="margin-bottom: 30px;">
+                        <h2 style="color: #0000cc;">Privacy</h2>
+                        <p style="line-height: 1.6; color: #555;">
+                            We respect user privacy and do not collect personal information. Search queries are 
+                            logged anonymously for service improvement purposes only. No IP addresses or personal 
+                            data are stored or shared.
+                        </p>
+                    </div>
+                    
+                    <div style="background: #e8f4f8; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+                        <h2 style="color: #0000cc; margin-top: 0;">Contact</h2>
+                        <p style="line-height: 1.6; color: #555;">
+                            This is a demo version. For questions about the original BTDigg service, 
+                            please visit the official website or GitHub repository.
+                        </p>
+                        <p style="line-height: 1.6; color: #555;">
+                            <strong>GitHub:</strong> <a href="https://github.com/btdig/dhtcrawler2" style="color: #0000cc;">https://github.com/btdig/dhtcrawler2</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Navigation -->
+                <div style="text-align:center;color:rgb(136, 136, 136);padding: 0px 4px;margin-top:20px">
+                    <table style="width:100%">
+                        <tr>
+                            <td style="color:rgb(136, 136, 136)"></td>
+                            <td style="width:100%;color:rgb(136, 136, 136)"></td>
+                            <td style="color:rgb(136, 136, 136)">
+                                <span style="white-space:nowrap">
+                                    <a style="color:rgb(0, 0, 204);text-decoration:none" href="/tor" title="TOR">TOR</a>
+                                </span>
+                            </td>
+                            <td style="color:rgb(136, 136, 136)">|</td>
+                            <td style="color:rgb(136, 136, 136)">
+                                <span style="white-space:nowrap">
+                                    <a style="color:rgb(0, 0, 204);text-decoration:none" href="/recent.html" title="Recent findings">Recent findings</a>
+                                </span>
+                            </td>
+                            <td style="color:rgb(136, 136, 136)">|</td>
+                            <td style="color:rgb(136, 136, 136)">
+                                <span style="white-space:nowrap">
+                                    <a style="color:rgb(0, 0, 204);text-decoration:none" href="/about/" title="About">About</a>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </center>
+    
+    <script src="script.js"></script>
+</body>
+</html>

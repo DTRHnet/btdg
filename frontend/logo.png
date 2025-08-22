@@ -1,0 +1,10 @@
+# Logo Placeholder
+
+This file should be replaced with an actual PNG logo image (200x200 pixels recommended).
+
+For development purposes, you can:
+1. Download a logo from the original BTDigg site
+2. Create your own logo
+3. Use a placeholder image service
+
+The logo should be named "logo.png" and placed in the frontend/ directory.

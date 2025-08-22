@@ -1,0 +1,55 @@
+{
+  "target_url": "https://btdig.com",
+  "site_type": "BitTorrent DHT Search Engine",
+  "analysis_date": "2024-01-01",
+  "frontend_analysis": {
+    "framework": "Vanilla HTML/CSS/JavaScript",
+    "rendering": "Server-side rendered",
+    "css_framework": "Custom CSS with Font Awesome icons",
+    "javascript": "Minimal client-side JavaScript for form validation",
+    "responsive": false,
+    "ui_patterns": [
+      "Search form with autocomplete",
+      "Simple navigation menu",
+      "Results listing with pagination",
+      "Language selector"
+    ]
+  },
+  "backend_analysis": {
+    "inferred_architecture": "Traditional server-side rendering",
+    "api_endpoints": [
+      "/search - Search functionality",
+      "/recent.html - Recent findings",
+      "/about/ - About page",
+      "/rss.xml - RSS feed",
+      "/opensearchdescription.xml - OpenSearch description"
+    ],
+    "data_flow": "Search queries processed server-side, results returned as HTML",
+    "authentication": "None detected - public search engine"
+  },
+  "database_analysis": {
+    "type": "Likely distributed hash table (DHT) crawler database",
+    "storage": "Real-time DHT network analysis",
+    "caching": "Not detected in frontend analysis"
+  },
+  "design_analysis": {
+    "layout": "Centered single-column layout",
+    "color_scheme": "Blue (#0000cc) and gray (#888888)",
+    "typography": "Standard web fonts",
+    "assets": [
+      "Base64 encoded logo image",
+      "Font Awesome icons",
+      "GitHub fork ribbon"
+    ],
+    "branding": "BTDigg logo and tagline 'rediscover the net'"
+  },
+  "features_detected": [
+    "Full-text search over torrents",
+    "Real-time DHT network analysis",
+    "Multi-language support (EN, FR, PT, CN, RU)",
+    "RSS feed",
+    "OpenSearch integration",
+    "TOR mirror link",
+    "Recent findings page"
+  ]
+}

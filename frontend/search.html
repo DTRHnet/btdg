@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - BTDigg DHT Search Engine</title>
+    <meta name="description" content="Search results for torrents on BTDigg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a style="position:absolute;z-index:10;top:0;right:0;border:0" href="https://github.com/btdig/dhtcrawler2">
+        <img style="border:0" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub">
+    </a>
+    
+    <center>
+        <div style="min-height:100%;position:relative;margin:0px;padding:0px">
+            <div style="padding: 10px 10px 80px;max-width:1000px">
+                <div style="margin: 30px 0px 20px">
+                    <a style="color:rgb(0, 0, 204);text-decoration:none" href="/index.html">
+                        <img style="height:100px;width:100px;border-width:0px;border-style:none;border-color:white" 
+                             alt="BTDigg, rediscover the net" src="logo.png">
+                    </a>
+                </div>
+                
+                <!-- Search form -->
+                <form id="searchForm" style="width:600px;height:2.8em;border:1px solid #bbb;position:relative" action="/search" method="get">
+                    <input id="q" name="q" style="height:39px;border-style:none;line-height:20px;font-size:18px;position:relative;width:100%;padding: 0px 10px;box-sizing:border-box" 
+                           placeholder="Search torrents..." type="text" value="{{ query }}">
+                    <button type="submit" style="position:absolute;right:0;top:0;height:100%;width:50px;background:#0000cc;color:white;border:none;cursor:pointer">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+                
+                <!-- Search results -->
+                <div class="search-results">
+                    <div style="margin: 20px 0; color: #666;">
+                        Found {{ total_results }} results for "{{ query }}" ({{ search_time }} seconds)
+                    </div>
+                    
+                    {% if results %}
+                        {% for result in results %}
+                        <div class="result-item">
+                            <div class="result-title">
+                                <a href="{{ result.magnet }}" style="color: #0000cc; text-decoration: none;">
+                                    {{ result.title }}
+                                </a>
+                            </div>
+                            <div class="result-info">
+                                Size: {{ result.size_formatted }} | 
+                                Files: {{ result.files }} | 
+                                Added: {{ result.added_formatted }} |
+                                Seeds: {{ result.seeds }} | 
+                                Peers: {{ result.peers }}
+                            </div>
+                            <div style="margin-top: 5px;">
+                                <a href="{{ result.magnet }}" class="result-magnet">
+                                    <i class="fa fa-magnet"></i> Magnet Link
+                                </a>
+                                {% if result.hash %}
+                                <span style="margin-left: 10px; color: #666; font-size: 12px;">
+                                    Hash: {{ result.hash }}
+                                </span>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                        
+                        <!-- Pagination -->
+                        {% if pagination.pages > 1 %}
+                        <div class="pagination">
+                            {% if pagination.current_page > 1 %}
+                                <a href="/search?q={{ query }}&p={{ pagination.current_page - 1 }}">&laquo; Previous</a>
+                            {% endif %}
+                            
+                            {% for page in pagination.page_range %}
+                                {% if page == pagination.current_page %}
+                                    <span class="current">{{ page }}</span>
+                                {% else %}
+                                    <a href="/search?q={{ query }}&p={{ page }}">{{ page }}</a>
+                                {% endif %}
+                            {% endfor %}
+                            
+                            {% if pagination.current_page < pagination.pages %}
+                                <a href="/search?q={{ query }}&p={{ pagination.current_page + 1 }}">Next &raquo;</a>
+                            {% endif %}
+                        </div>
+                        {% endif %}
+                    {% else %}
+                        <div style="text-align: center; padding: 40px; color: #666;">
+                            <i class="fa fa-search" style="font-size: 48px; margin-bottom: 20px; color: #ccc;"></i>
+                            <h3>No results found</h3>
+                            <p>Try different keywords or check your spelling.</p>
+                        </div>
+                    {% endif %}
+                </div>
+                
+                <!-- Navigation -->
+                <div style="text-align:center;color:rgb(136, 136, 136);padding: 0px 4px;margin-top:20px">
+                    <table style="width:100%">
+                        <tr>
+                            <td style="color:rgb(136, 136, 136)"></td>
+                            <td style="width:100%;color:rgb(136, 136, 136)"></td>
+                            <td style="color:rgb(136, 136, 136)">
+                                <span style="white-space:nowrap">
+                                    <a style="color:rgb(0, 0, 204);text-decoration:none" href="/tor" title="TOR">TOR</a>
+                                </span>
+                            </td>
+                            <td style="color:rgb(136, 136, 136)">|</td>
+                            <td style="color:rgb(136, 136, 136)">
+                                <span style="white-space:nowrap">
+                                    <a style="color:rgb(0, 0, 204);text-decoration:none" href="/recent.html" title="Recent findings">Recent findings</a>
+                                </span>
+                            </td>
+                            <td style="color:rgb(136, 136, 136)">|</td>
+                            <td style="color:rgb(136, 136, 136)">
+                                <span style="white-space:nowrap">
+                                    <a style="color:rgb(0, 0, 204);text-decoration:none" href="/about/" title="About">About</a>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </center>
+    
+    <script src="script.js"></script>
+</body>
+</html>
